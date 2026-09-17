@@ -35,13 +35,15 @@ runs:
         COMMENTER_PLAN_FILE: ${{ inputs.commenter_plan_path }}
         GITHUB_EVENT: ${{ toJSON(github.event) }}
       run: |
-        ${{ github.action_path }}/entrypoint.sh ${{ inputs.commenter_type }} ${{ inputs.commenter_exitcode }}
+        entrypoint.sh ${{ inputs.commenter_type }} ${{ inputs.commenter_exitcode }}
       shell: bash
+      working-directory: ${{ github.action_path }}
     - name: Run commenter image (non-plan)
       if: ${{ inputs.commenter_type != 'plan' }}
       env:
         COMMENTER_INPUT: ${{ inputs.commenter_input }}
         GITHUB_EVENT: ${{ toJSON(github.event) }}
       run: |
-        ${{ github.action_path }}/entrypoint.sh ${{ inputs.commenter_type }} ${{ inputs.commenter_exitcode }}
+        entrypoint.sh ${{ inputs.commenter_type }} ${{ inputs.commenter_exitcode }}
       shell: bash
+      working-directory: ${{ github.action_path }}
