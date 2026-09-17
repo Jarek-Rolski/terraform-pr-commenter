@@ -15,7 +15,7 @@ parse_args () {
   debug "COMMENTER_INPUT: $COMMENTER_INPUT"
 
   if [[ $COMMAND == 'plan' ]]; then
-    if test -f "workspace/${COMMENTER_PLAN_FILE}"; then
+    if test -f "${COMMENTER_PLAN_FILE}"; then
       info "Found commenter plan file."
       pushd workspace > /dev/null || (error "Failed to push workspace dir" && exit 1)
       RAW_INPUT="$( cat "${COMMENTER_PLAN_FILE}" 2>&1 )"
