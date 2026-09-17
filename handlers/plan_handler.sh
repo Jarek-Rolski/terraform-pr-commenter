@@ -42,7 +42,7 @@ plan_fail () {
   warnings_and_errors=$(echo "$clean_input" | sed '/^[^│╷╵]*$/d')
   clean_input=$(echo "$clean_input" | sed '/^.*[│╷╵].*$/d' )
   clean_input="$clean_input
-  $warnings_and_errors"
+$warnings_and_errors"
 
   post_diff_comments "plan" "Terraform \`plan\` Failed for Workspace: \`$WORKSPACE\`" "$clean_input"
 }
@@ -69,7 +69,7 @@ post_plan_comments () {
   clean_input=$(echo "$clean_input" | sed -r "${delimiter_end_cmd}")
   clean_input=$(echo "$clean_input" | sed '/^.*[│╷╵].*$/d' )
   clean_input="$clean_input
-  $warnings_and_errors"
+$warnings_and_errors"
 
   post_diff_comments "plan" "Terraform \`plan\` Succeeded for Workspace: \`$WORKSPACE\`" "$clean_input"
 }
