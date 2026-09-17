@@ -18,6 +18,7 @@ execute_plan () {
   fi
 }
 
+
 plan_success () {
   post_plan_comments
   if [[ $POST_PLAN_OUTPUTS == 'true' ]]; then
@@ -38,6 +39,9 @@ plan_fail () {
   debug "delimiter_start_cmd: $delimiter_start_cmd"
 
   clean_input=$(echo "$INPUT" | perl -pe "${delimiter_start_cmd}")
+  warnings_and_errors=$(echo "$clean_input" | sed '/^[^│╷╵]*$/d')
+  clean_input=$(echo "$clean_input" | sed '/^.*[│╷╵].*$/d' )
+  clean_input=$clean_input$warnings_and_errors
 
   post_diff_comments "plan" "Terraform \`plan\` Failed for Workspace: \`$WORKSPACE\`" "$clean_input"
 }
@@ -60,7 +64,10 @@ post_plan_comments () {
   debug "delimiter_end_cmd: $delimiter_end_cmd"
 
   clean_input=$(echo "$INPUT" | perl -pe "${delimiter_start_cmd}")
+  warnings_and_errors=$(echo "$clean_input" | sed '/^[^│╷╵]*$/d')
   clean_input=$(echo "$clean_input" | sed -r "${delimiter_end_cmd}")
+  clean_input=$(echo "$clean_input" | sed '/^.*[│╷╵].*$/d' )
+  clean_input=$clean_input$warnings_and_errors
 
   post_diff_comments "plan" "Terraform \`plan\` Succeeded for Workspace: \`$WORKSPACE\`" "$clean_input"
 }
@@ -81,6 +88,7 @@ post_outputs_comments() {
 
   clean_input=$(echo "$INPUT" | perl -pe "${delimiter_start_cmd}")
   clean_input=$(echo "$clean_input" | sed -r "${delimiter_end_cmd}")
+  clean_input=$(echo "$clean_input" | sed '/^.*[│╷╵].*$/d' )
 
   post_diff_comments "outputs" "Changes to outputs for Workspace: \`$WORKSPACE\`" "$clean_input"
 }
