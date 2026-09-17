@@ -32,7 +32,7 @@ runs:
       if: ${{ inputs.commenter_type == 'plan' }}
       env:
         COMMENTER_INPUT: ${{ inputs.commenter_input }}
-        COMMENTER_PLAN_FILE: ${{ github.workspace }}/workspace/${{ inputs.commenter_plan_path }}
+        COMMENTER_PLAN_FILE: ${{ github.workspace }}/${{ inputs.commenter_plan_path }}
         GITHUB_EVENT: ${{ toJSON(github.event) }}
       run: |
         ./entrypoint.sh ${{ inputs.commenter_type }} ${{ inputs.commenter_exitcode }}

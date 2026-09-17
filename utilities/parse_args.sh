@@ -17,9 +17,7 @@ parse_args () {
   if [[ $COMMAND == 'plan' ]]; then
     if test -f "${COMMENTER_PLAN_FILE}"; then
       info "Found commenter plan file."
-      pushd workspace > /dev/null || (error "Failed to push workspace dir" && exit 1)
       RAW_INPUT="$( cat "${COMMENTER_PLAN_FILE}" 2>&1 )"
-      popd > /dev/null || (error "Failed to pop workspace dir" && exit 1)
     else
       info "Found no tfplan file. Using input argument."
     fi
