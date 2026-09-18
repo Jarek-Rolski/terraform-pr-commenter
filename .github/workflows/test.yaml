@@ -4,9 +4,10 @@ on:
   pull_request:
 
 jobs:
-  release:
+  test:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v7
       - name: Test Commenter
         run: |
           ./testing/scripts/tests.sh
