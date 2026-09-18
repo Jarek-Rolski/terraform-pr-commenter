@@ -1,17 +1,17 @@
 # Terraform PR Commenter
 
-> This project was forked from <https://github.com/robburger/terraform-pr-commenter> project, originally created by [
+> This project was forked from <https://github.com/GetTerminus/terraform-pr-commenter>, which was itself forked from <https://github.com/robburger/terraform-pr-commenter>, originally created by [
 Rob Burger](https://github.com/robburger).
 
 ## Summary
 
-This Docker-based GitHub Action is designed to work in tandem with [hashicorp/setup-terraform](https://github.com/hashicorp/setup-terraform) and [terraform-linters/setup-tflint](https://github.com/terraform-linters/setup-tflint) with the **wrapper enabled**, taking the output from a `fmt`, `init`, `plan`, `validate` or `tflint`, formatting it and adding it to a pull request. Any previous comments from this Action are removed to keep the PR timeline clean.
+This GitHub Action is designed to work in tandem with [hashicorp/setup-terraform](https://github.com/hashicorp/setup-terraform) and [terraform-linters/setup-tflint](https://github.com/terraform-linters/setup-tflint) with the **wrapper enabled**, taking the output from a `fmt`, `init`, `plan`, `validate` or `tflint`, formatting it and adding it to a pull request. Any previous comments from this Action are removed to keep the PR timeline clean.
 
 > The `terraform_wrapper` needs to be set to `true` for the `hashicorp/setup-terraform` step if using `stdout`, `stderr` and the `exitcode` step outputs like the below examples.
 
 > The `tflint_wrapper` needs to be set to `true` for the `terraform-linters/setup-tflint` step if using `stdout`, `stderr` and the `exitcode` step outputs like the below examples.
 
-Support (for now) is [limited to Linux](https://help.github.com/en/actions/creating-actions/about-actions#types-of-actions) as Docker-based GitHub Actions can only be used on Linux runners.
+> **Note:** This action relies on GNU-specific tooling (`bash` 4+, GNU `sed`, `jq`, `perl`, `curl`) and is only supported on Linux runners. Set `runs-on: ubuntu-latest` (or an equivalent Linux runner) in the calling job — macOS and Windows runners are not supported.
 
 ## Usage
 
@@ -109,8 +109,6 @@ jobs:
 | `commenter_input`     | ___optional___ | The comment to post from a previous step output. For plan commenter type either `commenter_input` or `commenter_plan_path` must be set. _This is limited to 128KiB_ |
 | `commenter_plan_path` | ___optional___ | The plan file path including the filename. Only available for plan commenter types.                                                                                 |
 | `commenter_exitcode`  | ___required___ | The exit code from a previous step output.                                                                                                                          |
-| `terraform_version`   | ___optional___ | The version of terraform from the workflow. Defaults to `1.4.6`.                                                                                                    |
-| `use_beta_version`    | ___optional___ | Whether or not to use the beta version of the commenter.                                                                                                            |
 
 ### Environment Variables
 

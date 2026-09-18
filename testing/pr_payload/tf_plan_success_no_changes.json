@@ -1,0 +1,5 @@
+[
+  {
+    "body": "### Terraform `plan` Succeeded for Workspace: `default`\n<details><summary>Show Output</summary>\n\n```diff\nNo changes. Your infrastructure matches the configuration.\n\nTerraform has compared your real infrastructure against your configuration\nand found no differences, so no changes are needed.\n╷\n│ Warning: Argument is deprecated\n│ \n│   with aws_test_addon.test,\n│   on test-addons.tf line 6, in resource \"aws_test_addon\" \"test\":\n│    6:   resolve_conflicts = \"OVERWRITE\"\n│ \n│ The \"resolve_conflicts\" attribute can't be set to \"PRESERVE\" on initial\n│ resource creation. Use \"resolve_conflicts_on_create\" and/or\n│ \"resolve_conflicts_on_update\" instead\n│ \n│ (and 9 more similar warnings elsewhere)\n╵\n```\n</details>"
+  }
+]

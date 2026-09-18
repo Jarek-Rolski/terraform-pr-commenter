@@ -1,0 +1,5 @@
+[
+  {
+    "body": "### Terraform `fmt` Failed\n<details><summary>Show Output</summary>\n\n```\n[command]/home/runner/work/_temp/f916c738-a3f9-416c-a411-6fad2d709557/terraform-bin fmt -check -recursive -diff\ntest.tf\n--- old/test.tf\n+++ new/test.tf\n@@ -161,7 +161,7 @@\n       ebs_optimized = true\n       vpc_security_group_ids = [\n         aws_security_group.test[0].id,\n-           ]\n+      ]\n\n       block_device_mappings = {\n         xvda = {\nvars/test.tfvars\n--- old/vars/test.tfvars\n+++ new/vars/test.tfvars\n@@ -17,4 +17,4 @@\n\n cluster_iam_role_path           = \"/\"\n test_cluster_security_group_name = \"test\"\n-test_cluster_iam_role_name       =                            \"test\"\n+test_cluster_iam_role_name       = \"test\"\n```\n</details>"
+  }
+]

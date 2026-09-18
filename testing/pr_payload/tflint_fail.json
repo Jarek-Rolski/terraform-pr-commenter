@@ -1,0 +1,5 @@
+[
+  {
+    "body": "### Linter `TFLint` Failed for Workspace: `default`\n<details><summary>Show Output</summary>\n\n```\n3 issue(s) found:\n\nWarning: [Fixable] Interpolation-only expressions are deprecated in Terraform v0.12.14 (terraform_deprecated_interpolation)\n\n  on outputs.tf line 53:\n  53:   value = [\"${aws_s3_bucket.test.*.bucket}\"]\n\nReference: https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_deprecated_interpolation.md\n\nWarning: [Fixable] List items should be accessed using square brackets (terraform_deprecated_index)\n\n  on outputs.tf line 53:\n  53:   value = [\"${aws_s3_bucket.test.*.bucket}\"]\n\nReference: https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_deprecated_index.md\n\nWarning: [Fixable] data \"aws_eks_cluster\" \"selected\" is declared but not used (terraform_unused_declarations)\n\n  on providers.tf line 32:\n  32: data \"aws_eks_cluster\" \"selected\" {\n\nReference: https://github.com/terraform-linters/tflint-ruleset-terraform/blob/v0.4.0/docs/rules/terraform_unused_declarations.md\n```\n</details>"
+  }
+]

@@ -184,5 +184,5 @@ Note: You didn't use the -out option to save this plan, so Terraform can't
 guarantee to take exactly these actions if you run "terraform apply" now.
 ::debug::Terraform exited with code 0.
 ::debug::stdout: [0m[1mtest%0A
-::debug::stderr: 
+::debug::stderr:
 ::debug::exitcode: 0
