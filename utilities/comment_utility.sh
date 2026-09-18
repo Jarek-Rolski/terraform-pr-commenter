@@ -1,8 +1,10 @@
+# shellcheck shell=bash
 ### PAYLOAD UTILITIES ###
 make_and_post_payload() {
 	# Add plan comment to PR.
 	local kind=$1
-	local pr_payload=$(echo '{}' | jq --arg body "$2" '.body = $body')
+	local pr_payload
+	pr_payload=$(echo '{}' | jq --arg body "$2" '.body = $body')
 
 	info "Adding $kind comment to PR."
 
@@ -17,7 +19,8 @@ make_details_with_header() {
 	local header="### $1"
 	local body=$2
 	local format=$3
-	local pr_comment="$header
+	local pr_comment
+	pr_comment="$header
 $(make_details "Show Output" "$body" "$format")"
 	echo "$pr_comment"
 }
@@ -36,6 +39,8 @@ $body
 }
 
 post_comment() {
+	debug "post_comment actual"
+	# shellcheck disable=SC2153 # PR_COMMENTS_URL (plural, set in utilities/parse_args.sh) is distinct from PR_COMMENT_URL
 	curl -sS -L -X POST -H "$ACCEPT_HEADER" -H "$AUTH_HEADER" -H "$CONTENT_HEADER" "$PR_COMMENTS_URL" -d "$pr_payload"
 }
 
@@ -55,13 +60,15 @@ post_diff_comments() {
 
 	for i in "${!comment_split[@]}"; do
 		local current="${comment_split[$i]}"
-		local colorized_comment=$(substitute_and_colorize "$current")
+		local colorized_comment
+		colorized_comment=$(substitute_and_colorize "$current")
 		local comment_count_text=""
 		if [ "$comment_count" -ne 1 ]; then
 			comment_count_text=" ($((i + 1))/$comment_count)"
 		fi
 
-		local comment=$(make_details_with_header "$comment_prefix$comment_count_text" "$colorized_comment" "diff")
+		local comment
+		comment=$(make_details_with_header "$comment_prefix$comment_count_text" "$colorized_comment" "diff")
 		make_and_post_payload "$type" "$comment"
 	done
 }
@@ -122,7 +129,7 @@ delete_existing_comments() {
 
 	info "Looking for an existing $type PR comment."
 	local comment_ids=()
-	for page in $(seq $last_page); do
+	for page in $(seq "$last_page"); do
 		# first, we read *all* of the comment IDs across all pages.  saves us from the problem where we read a page, then
 		# delete some, then read the next page, *after* our page boundary has moved due to the delete.
 		# CAUTION.  this line assumes the PR_COMMENTS_URL already has at least one query parameter. (note the '&')
@@ -132,6 +139,7 @@ delete_existing_comments() {
 	for PR_COMMENT_ID in "${comment_ids[@]}"; do
 		FOUND=true
 		info "Found existing $type PR comment: $PR_COMMENT_ID. Deleting."
+		# shellcheck disable=SC2153 # PR_COMMENT_URI (set in utilities/parse_args.sh) is distinct from PR_COMMENT_URL
 		PR_COMMENT_URL="$PR_COMMENT_URI/$PR_COMMENT_ID"
 		STATUS=$(curl -sS -X DELETE -H "$AUTH_HEADER" -H "$ACCEPT_HEADER" -o /dev/null -w "%{http_code}" -L "$PR_COMMENT_URL")
 		debug "Status: $STATUS"
@@ -140,7 +148,7 @@ delete_existing_comments() {
 		fi
 	done
 
-	if [ -z $FOUND ]; then
+	if [ -z "$FOUND" ]; then
 		info "No existing $type PR comment found."
 	fi
 }

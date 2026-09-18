@@ -1,0 +1,120 @@
+{
+  "action": "opened",
+  "number": 42,
+  "pull_request": {
+    "url": "https://api.github.com/repos/octo-org/example-repo/pulls/42",
+    "id": 1279147917,
+    "node_id": "PR_kwDOExampleNodeId42",
+    "html_url": "https://github.com/octo-org/example-repo/pull/42",
+    "diff_url": "https://github.com/octo-org/example-repo/pull/42.diff",
+    "patch_url": "https://github.com/octo-org/example-repo/pull/42.patch",
+    "issue_url": "https://api.github.com/repos/octo-org/example-repo/issues/42",
+    "number": 42,
+    "state": "open",
+    "locked": false,
+    "title": "Add S3 bucket versioning and lifecycle rules",
+    "user": {
+      "login": "octocat",
+      "id": 583231,
+      "node_id": "MDQ6VXNlcjU4MzIzMQ==",
+      "avatar_url": "https://avatars.githubusercontent.com/u/583231?v=4",
+      "html_url": "https://github.com/octocat",
+      "type": "User",
+      "site_admin": false
+    },
+    "body": "This PR enables versioning and a lifecycle policy on the logging bucket.",
+    "created_at": "2026-09-18T09:12:00Z",
+    "updated_at": "2026-09-18T09:15:00Z",
+    "closed_at": null,
+    "merged_at": null,
+    "merge_commit_sha": null,
+    "assignee": null,
+    "assignees": [],
+    "requested_reviewers": [],
+    "requested_teams": [],
+    "labels": [],
+    "milestone": null,
+    "draft": false,
+    "commits_url": "https://api.github.com/repos/octo-org/example-repo/pulls/42/commits",
+    "review_comments_url": "https://api.github.com/repos/octo-org/example-repo/pulls/42/comments",
+    "review_comment_url": "https://api.github.com/repos/octo-org/example-repo/pulls/comments{/number}",
+    "comments_url": "https://api.github.com/repos/octo-org/example-repo/issues/42/comments",
+    "statuses_url": "https://api.github.com/repos/octo-org/example-repo/statuses/1a2b3c4d5e6f7a8b9c0d1e2f3a4b5c6d7e8f9a0b",
+    "head": {
+      "label": "octocat:feature/s3-versioning",
+      "ref": "feature/s3-versioning",
+      "sha": "1111",
+      "user": {
+        "login": "octocat",
+        "id": 583231
+      },
+      "repo": {
+        "id": 987654321,
+        "name": "example-repo",
+        "full_name": "octo-org/example-repo",
+        "private": false
+      }
+    },
+    "base": {
+      "label": "octo-org:main",
+      "ref": "main",
+      "sha": "1111",
+      "user": {
+        "login": "octo-org",
+        "id": 4567890
+      },
+      "repo": {
+        "id": 987654321,
+        "name": "example-repo",
+        "full_name": "octo-org/example-repo",
+        "private": false
+      }
+    },
+    "author_association": "CONTRIBUTOR",
+    "auto_merge": null,
+    "active_lock_reason": null,
+    "merged": false,
+    "mergeable": true,
+    "rebaseable": true,
+    "mergeable_state": "clean",
+    "merged_by": null,
+    "comments": 1,
+    "review_comments": 0,
+    "maintainer_can_modify": true,
+    "commits": 3,
+    "additions": 42,
+    "deletions": 7,
+    "changed_files": 2
+  },
+  "repository": {
+    "id": 987654321,
+    "node_id": "R_kgDOExampleNodeId",
+    "name": "example-repo",
+    "full_name": "octo-org/example-repo",
+    "private": false,
+    "owner": {
+      "login": "octo-org",
+      "id": 4567890,
+      "type": "Organization",
+      "site_admin": false
+    },
+    "html_url": "https://github.com/octo-org/example-repo",
+    "description": "Example Terraform infrastructure repository",
+    "fork": false,
+    "url": "https://api.github.com/repos/octo-org/example-repo",
+    "issue_comment_url": "https://api.github.com/repos/octo-org/example-repo/issues/comments{/number}",
+    "issues_url": "https://api.github.com/repos/octo-org/example-repo/issues{/number}",
+    "pulls_url": "https://api.github.com/repos/octo-org/example-repo/pulls{/number}",
+    "default_branch": "main",
+    "visibility": "public"
+  },
+  "sender": {
+    "login": "octocat",
+    "id": 583231,
+    "node_id": "MDQ6VXNlcjU4MzIzMQ==",
+    "avatar_url": "https://avatars.githubusercontent.com/u/583231?v=4",
+    "html_url": "https://github.com/octocat",
+    "type": "User",
+    "site_admin": false
+  }
+}
