@@ -1,6 +1,6 @@
 # Terraform PR Commenter
 
-> This project was forked from <https://github.com/robburger/terraform-pr-commenter> project, originally created by [
+> This project was forked from <https://github.com/GetTerminus/terraform-pr-commenter>, which was itself forked from <https://github.com/robburger/terraform-pr-commenter>, originally created by [
 Rob Burger](https://github.com/robburger).
 
 ## Summary
@@ -109,8 +109,6 @@ jobs:
 | `commenter_input`     | ___optional___ | The comment to post from a previous step output. For plan commenter type either `commenter_input` or `commenter_plan_path` must be set. _This is limited to 128KiB_ |
 | `commenter_plan_path` | ___optional___ | The plan file path including the filename. Only available for plan commenter types.                                                                                 |
 | `commenter_exitcode`  | ___required___ | The exit code from a previous step output.                                                                                                                          |
-| `terraform_version`   | ___optional___ | The version of terraform from the workflow. Defaults to `1.4.6`.                                                                                                    |
-| `use_beta_version`    | ___optional___ | Whether or not to use the beta version of the commenter.                                                                                                            |
 
 ### Environment Variables
 
