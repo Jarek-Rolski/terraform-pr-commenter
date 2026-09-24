@@ -36,7 +36,7 @@ jobs:
     runs-on: ubuntu-latest
   steps:
     - name: HashiCorp - Setup Terraform
-      uses: hashicorp/setup-terraform@v2
+      uses: hashicorp/setup-terraform@v4
       with:
         terraform_version: ${{ env.TF_VERSION }}
     - name: Terraform Format
@@ -46,7 +46,7 @@ jobs:
       continue-on-error: true
     - name: Post Format Comment
       if: ${{ always() && (steps.fmt.outcome == 'success' || steps.fmt.outcome == 'failure') }}
-      uses: Jarek-Rolski/terraform-pr-commenter@v1.0.0
+      uses: Jarek-Rolski/terraform-pr-commenter@v1
       with:
         commenter_type: fmt
         commenter_input: ${{ format('{0}{1}', steps.fmt.outputs.stdout, steps.fmt.outputs.stderr) }}
@@ -56,7 +56,7 @@ jobs:
       run: terraform init -lock=false -input=false
     - name: Post Init Comment
       if: ${{ always() && (steps.init.outcome == 'success' || steps.init.outcome == 'failure') }}
-      uses: Jarek-Rolski/terraform-pr-commenter@v1.0.0
+      uses: Jarek-Rolski/terraform-pr-commenter@v1
       with:
         commenter_type: init
         commenter_input: ${{ format('{0}{1}', steps.init.outputs.stdout, steps.init.outputs.stderr) }}
@@ -66,24 +66,24 @@ jobs:
       run: terraform validate
     - name: Post TF Validate Comment
       if: ${{ always() && (steps.validate.outcome == 'success' || steps.validate.outcome == 'failure') }}
-      uses: Jarek-Rolski/terraform-pr-commenter@v1.0.0
+      uses: Jarek-Rolski/terraform-pr-commenter@v1
       with:
         commenter_type: validate
         commenter_input: ${{ format('{0}{1}', steps.validate.outputs.stdout, steps.validate.outputs.stderr) }}
         commenter_exitcode: ${{ steps.validate.outputs.exitcode }}
     - name: TFLint - Setup
-      id: tflint
-      uses: terraform-linters/setup-tflint@v3
+      uses: terraform-linters/setup-tflint@v6
       with:
-        tflint_wrapper_enabled: true
+        tflint_wrapper: true
     - name: TFLint - Run
+      id: tflint
       run: |
         tflint --version
         tflint --init
         tflint
     - name: Post TFLint Comment
       if: ${{ always() && (steps.tflint.outcome == 'success' || steps.tflint.outcome == 'failure') }}
-      uses: Jarek-Rolski/terraform-pr-commenter@v1.0.0
+      uses: Jarek-Rolski/terraform-pr-commenter@v1
       with:
         commenter_type: tflint
         commenter_input: ${{ format('{0}{1}', steps.tflint.outputs.stdout, steps.tflint.outputs.stderr) }}
@@ -91,7 +91,7 @@ jobs:
     - name: Terraform Plan
       id: plan
       run: terraform plan -lock=false -input=false |& tee tf_plan.txt
-    - uses: Jarek-Rolski/terraform-pr-commenter@v1.0.0
+    - uses: Jarek-Rolski/terraform-pr-commenter@v1
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TF_WORKSPACE: ${{ inputs.terraform_workspace }}
