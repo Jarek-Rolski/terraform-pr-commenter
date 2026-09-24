@@ -1,0 +1,31 @@
+name: 'Terraform and TFLint PR Commenter'
+description: 'Adds opinionated comments to a PR from Terraform fmt/init/plan/validate/tflint output'
+author: 'Jarek-Rolski'
+branding:
+  icon: 'git-pull-request'
+  color: 'blue'
+inputs:
+  commenter_type:
+    description: 'The type of comment. Options: [fmt, init, plan, validate, tflint]'
+    required: true
+  commenter_input:
+    description: 'The comment to post from a previous step output. This must be trimmed to at least 128 KiB. Required for non plan commenter types.'
+    required: false
+  commenter_plan_path:
+    description: 'The tfplan file. Required if commenter input is not set for plan commenter types.'
+    required: false
+  commenter_exitcode:
+    description: 'The exit code from a previous step output'
+    required: true
+runs:
+  using: "composite"
+  steps:
+    - name: Run commenter
+      env:
+        COMMENTER_INPUT: ${{ inputs.commenter_input }}
+        COMMENTER_PLAN_FILE: ${{ github.workspace }}/${{ inputs.commenter_plan_path }}
+        GITHUB_EVENT: ${{ toJSON(github.event) }}
+      run: |
+        ./entrypoint.sh ${{ inputs.commenter_type }} ${{ inputs.commenter_exitcode }}
+      shell: bash
+      working-directory: ${{ github.action_path }}

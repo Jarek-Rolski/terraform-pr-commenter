@@ -1,0 +1,214 @@
+module.errorchecks["group_apps_allowed_users_valid_emails"].data.external.this: Reading...
+module.errorchecks["group_emails_valid_domains"].data.external.this: Reading...
+module.errorchecks["group_apps_admin_users_valid_domains"].data.external.this: Reading...
+module.errorchecks["group_apps_allowed_users_valid_domains"].data.external.this: Reading...
+module.errorchecks["group_apps_admin_users_valid_emails"].data.external.this: Reading...
+module.errorchecks["group_emails_valid_emails"].data.external.this: Reading...
+module.errorchecks["group_apps_admin_users_valid_domains"].data.external.this: Read complete after 0s [id=-]
+module.errorchecks["group_apps_allowed_users_valid_domains"].data.external.this: Read complete after 0s [id=-]
+module.errorchecks["group_emails_valid_emails"].data.external.this: Read complete after 0s [id=-]
+module.errorchecks["group_apps_allowed_users_valid_emails"].data.external.this: Read complete after 0s [id=-]
+module.errorchecks["group_apps_admin_users_valid_emails"].data.external.this: Read complete after 0s [id=-]
+module.cognit_groups.aws_cognito_user_group.this["dummy-app-01"]: Refreshing state... [id=eu-west-2_dummyPool001/dummy-app-01]
+module.cognit_groups.aws_cognito_user_group.this["dummy-app-02"]: Refreshing state... [id=eu-west-2_dummyPool001/dummy-app-02]
+module.cognit_groups.aws_cognito_user_group.this["dummy-app-03"]: Refreshing state... [id=eu-west-2_dummyPool001/dummy-app-03]
+module.cognit_groups.aws_cognito_user_group.this["dummy-app-04"]: Refreshing state... [id=eu-west-2_dummyPool001/dummy-app-04]
+module.cognit_groups.aws_cognito_user_group.this["dummy-app-05"]: Refreshing state... [id=eu-west-2_dummyPool001/dummy-app-05]
+module.cognit_groups.aws_cognito_user_group.this["dummy-app-06"]: Refreshing state... [id=eu-west-2_dummyPool001/dummy-app-06]
+aws_secretsmanager_secret.this: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-01-app-access-AAAA01]
+module.cognit_groups.aws_cognito_user_group.this["dummy-app-07"]: Refreshing state... [id=eu-west-2_dummyPool001/dummy-app-07]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-08"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-08/access-AAAA02]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-09"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-09/access-AAAA03]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-10"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-10/access-AAAA04]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-11"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-11/access-AAAA05]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-12"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-12/access-AAAA06]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-13"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-13/access-AAAA07]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-14"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-14/access-AAAA08]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-15"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-15/access-AAAA09]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-16"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-16/access-AAAA10]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-17"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-17/access-AAAA11]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-18"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-18/access-AAAA12]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-19"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-19/access-AAAA13]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-20"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-20/access-AAAA14]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-21"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-21/access-AAAA15]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-22"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-22/access-AAAA16]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-23"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-23/access-AAAA17]
+module.secrets_apps.aws_secretsmanager_secret.this["dummy-app-24"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-24/access-AAAA18]
+aws_secretsmanager_secret_version.this: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-01-app-access-AAAA01|terraform-00000000000000000000000015]
+terraform_data.update_cognito_users_groups: Refreshing state... [id=00000000-0000-0000-0000-000000000000]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-11"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-11/access-AAAA05|terraform-00000000000000000000000005]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-12"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-12/access-AAAA06|terraform-0000000000000000000000000008]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-17"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-17/access-AAAA11|terraform-00000000000000000000000006]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-16"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-16/access-AAAA10|terraform-00000000000000000000000011]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-15"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-15/access-AAAA09|terraform-00000000000000000000000016]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-24"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-24/access-AAAA18|terraform-00000000000000000000000013]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-13"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-13/access-AAAA07|terraform-00000000000000000000000004]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-10"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-10/access-AAAA04|terraform-00000000000000000000000010]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-14"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-14/access-AAAA08|terraform-00000000000000000000000018]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-22"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-22/access-AAAA16|terraform-0000000000000000000000000009]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-23"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-23/access-AAAA17|terraform-00000000000000000000000017]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-08"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-08/access-AAAA02|terraform-00000000000000000000000014]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-19"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-19/access-AAAA13|terraform-00000000000000000000000002]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-20"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-20/access-AAAA14|terraform-00000000000000000000000003]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-21"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-21/access-AAAA15|terraform-00000000000000000000000007]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-09"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-09/access-AAAA03|terraform-00000000000000000000000001]
+module.secrets_apps.aws_secretsmanager_secret_version.this["dummy-app-18"]: Refreshing state... [id=arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-18/access-AAAA12|terraform-00000000000000000000000012]
+╷
+
+│ Error: External Program Execution Failed
+│
+Terraform used the selected providers to generate the following execution
+│   with module.errorchecks["group_emails_valid_domains"].data.external.this,
+plan. Resource actions are indicated with the following symbols:
+│   on .terraform/modules/errorchecks/main.tf line 9, in data "external" "this":
+-/+ destroy and then create replacement
+│    9:   program = local.program
+
+│
+Terraform planned the following actions, but then encountered a problem:
+│ The data source received an unexpected error while attempting to execute
+
+│ the program.
+  # aws_secretsmanager_secret_version.this must be replaced
+│
+-/+ resource "aws_secretsmanager_secret_version" "this" {
+│ Program: /usr/bin/python
+      ~ arn                  = "arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-01-app-access-AAAA01" -> (known after apply)
+      + has_secret_string_wo = (known after apply)
+      ~ id                   = "arn:aws:secretsmanager:eu-west-2:000000000000:secret:dummy-app-01-app-access-AAAA01|terraform-00000000000000000000000015" -> (known after apply)
+      ~ secret_string        = (sensitive value) # forces replacement
+      ~ version_id           = "terraform-00000000000000000000000015" -> (known after apply)
+      ~ version_stages       = [
+          - "AWSCURRENT",
+        ] -> (known after apply)
+        # (4 unchanged attributes hidden)
+    }
+
+  # terraform_data.update_cognito_users_groups must be replaced
+-/+ resource "terraform_data" "update_cognito_users_groups" {
+      ~ id               = "00000000-0000-0000-0000-000000000000" -> (known after apply)
+      ~ input            = {
+          ~ group_emails         = jsonencode(
+              ~ {
+                  ~ dummy-app-01           = [
+                        # (25 unchanged elements hidden)
+                        "user001@agency-one.gov.uk",
+                      + "user002@agency-noe.gov.uk",
+                        "user003@agency-one.gov.uk",
+                        # (7 unchanged elements hidden)
+                        "user004@agency-one.gov.uk",
+                      + "user005@agency-one.gov.uk",
+                        "user006@agency-one.gov.uk",
+                        # (6 unchanged elements hidden)
+                    ]
+                    # (1 unchanged attribute hidden)
+                }
+            )
+            # (1 unchanged attribute hidden)
+        }
+      ~ output           = {
+          - cognito_user_pool_id = "eu-west-2_dummyPool001"
+          - group_emails         = jsonencode(
+                {
+                  - dummy-app-02 = [
+                      - "user007@agency-one.gov.uk",
+                      - "user008@agency-one.gov.uk",
+                      - "user009@agency-one.gov.uk",
+                      - "user010@agency-one.gov.uk",
+                      - "user011@agency-one.gov.uk",
+                      - "user012@agency-one.gov.uk",
+                      - "user013@agency-one.gov.uk",
+                      - "user014@agency-one.gov.uk",
+                      - "user015@agency-one.gov.uk",
+                      - "user016@agency-one.gov.uk",
+                      - "user017@agency-one.gov.uk",
+                      - "user018@agency-one.gov.uk",
+                      - "user019@agency-one.gov.uk",
+                      - "user020@agency-one.gov.uk",
+                      - "user021@agency-one.gov.uk",
+                      - "user022@agency-one.gov.uk",
+                    ]
+                  - dummy-app-01           = [
+                      - "user023@agency-two.gov.uk",
+                      - "user024@agency-two.gov.uk",
+                      - "user025@agency-two.gov.uk",
+                      - "user026@agency-two.gov.uk",
+                      - "user001@agency-two.gov.uk",
+│ Error Message: Traceback (most recent call last):
+                      - "user003@agency-two.gov.uk",
+                      - "user027@agency-two.gov.uk",
+│   File "/home/runner/work/dummy-app-01-app-access/dummy-app-01-app-access/.terraform/modules/errorchecks/python/errorcheck.py", line 15, in <module>
+│     raise Exception(DATA['error_message'])
+│ Exception:
+│ There was email domain validation error found in variable group_emails_dev.
+│ Fix emails domain names or add them to group_domains_dev variable
+│
+│ {"dummy-app-01":["user002@agency-noe.gov.uk"]}
+│ Please fix it.
+│
+│
+│ State: exit status 1
+╵
+                      - "user028@agency-two.gov.uk",
+                      - "user029@agency-two.gov.uk",
+                      - "user030@agency-two.gov.uk",
+                      - "user031@agency-two.gov.uk",
+                      - "user032@agency-two.gov.uk",
+                      - "user004@agency-two.gov.uk",
+                      - "user006@agency-two.gov.uk",
+                      - "user033@agency-two.gov.uk",
+                      - "user034@agency-two.gov.uk",
+                      - "user035@agency-two.gov.uk",
+                      - "user036@agency-two.gov.uk",
+                      - "user037@agency-two.gov.uk",
+                      - "user023@agency-one.gov.uk",
+                      - "user038@agency-one.gov.uk",
+                      - "user039@agency-one.gov.uk",
+                      - "user026@agency-one.gov.uk",
+                      - "user040@agency-one.gov.uk",
+                      - "user041@agency-one.gov.uk",
+                      - "user001@agency-one.gov.uk",
+                      - "user003@agency-one.gov.uk",
+                      - "user027@agency-one.gov.uk",
+                      - "user028@agency-one.gov.uk",
+                      - "user029@agency-one.gov.uk",
+                      - "user042@agency-one.gov.uk",
+                      - "user031@agency-one.gov.uk",
+                      - "user032@agency-one.gov.uk",
+                      - "user043@agency-one.gov.uk",
+                      - "user004@agency-one.gov.uk",
+                      - "user006@agency-one.gov.uk",
+                      - "user033@agency-one.gov.uk",
+                      - "user044@agency-one.gov.uk",
+                      - "user034@agency-one.gov.uk",
+                      - "user035@agency-one.gov.uk",
+                      - "user036@agency-one.gov.uk",
+                      - "user045@agency-one.gov.uk",
+                    ]
+                }
+            )
+        } -> (known after apply)
+      ~ triggers_replace = [
+            "eu-west-2_dummyPool001",
+          ~ {
+              ~ dummy-app-01           = [
+                    # (25 unchanged elements hidden)
+                    "user001@agency-one.gov.uk",
+                  + "user002@agency-noe.gov.uk",
+                    "user003@agency-one.gov.uk",
+                    # (7 unchanged elements hidden)
+                    "user004@agency-one.gov.uk",
+                  + "user005@agency-one.gov.uk",
+                    "user006@agency-one.gov.uk",
+                    # (6 unchanged elements hidden)
+                ]
+                # (1 unchanged attribute hidden)
+            },
+            "1.1",
+        ]
+    }
+
+Plan: 2 to add, 0 to change, 2 to destroy.
+Releasing state lock. This may take a few moments...
+Error: Terraform exited with code 1.
+Error: Process completed with exit code 1.

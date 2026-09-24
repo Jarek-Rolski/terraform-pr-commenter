@@ -1,0 +1,5 @@
+[
+  {
+    "body": "### Terraform `validate` Failed\n<details><summary>Show Output</summary>\n\n```diff\n[command]/home/runner/work/_temp/1ae545d0-53d7-4d7f-87ed-ec0b0d7a74e4/terraform-bin validate\n╷\n│ Warning: Argument is deprecated\n│ \n│   with module.test_vpc.aws_eip.nat,\n│   on modules/vpc/test.tf line 846, in resource \"aws_eip\" \"nat\":\n│  846:   vpc = true\n│ \n│ use domain attribute instead\n╵\n╷\n│ Error: Missing resource instance key\n│ \n│   on test.tf line 163, in module \"test\":\n│  163:         aws_security_group.test.id,\n│ \n│ Because aws_security_group.test has \"count\" set, its\n│ attributes must be accessed on specific instances.\n│ \n│ For example, to correlate with indices of a referring resource, use:\n│     aws_security_group.test[count.index]\n╵\n```\n</details>"
+  }
+]
